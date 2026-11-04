@@ -33,6 +33,38 @@
             "stopAtEntry": false
         },
         {
+            "name": "Server (Tools)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/Content.Server",
+                "--configuration",
+                "Tools"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Client (Tools)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/Content.Client",
+                "--configuration",
+                "Tools"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": "YAML Linter",
             "type": "coreclr",
             "request": "launch",
@@ -51,6 +83,14 @@
                 "Client"
             ],
             "preLaunchTask": "build"
+        },
+        {
+            "name": "Server/Client (Tools)",
+            "configurations": [
+                "Server (Tools)",
+                "Client (Tools)"
+            ]
         }
     ]
+
 }
